@@ -4,12 +4,12 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { 
-  Github, 
-  Twitter, 
-  Linkedin, 
-  Mail, 
-  Phone, 
+import {
+  Github,
+  Twitter,
+  Linkedin,
+  Mail,
+  Phone,
   MapPin,
   ArrowRight,
   Building2,
@@ -71,20 +71,20 @@ export function Footer() {
                 <p className="text-muted-foreground mb-6 max-w-sm text-sm">
                   Building intelligent software that scales — Web, Mobile & Embedded.
                 </p>
-                
+
                 {/* Contact Info */}
                 <div className="space-y-3">
                   <div className="flex items-start space-x-2">
                     <Mail className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">hello@techmatrix-ai.com</span>
+                    <span className="text-sm text-muted-foreground">support@techmatrix-ai.com</span>
                   </div>
                   <div className="flex items-start space-x-2">
                     <Phone className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">+91-XXXXXXXXXX</span>
+                    <span className="text-sm text-muted-foreground">+91 84899 18000</span>
                   </div>
                   <div className="flex items-start space-x-2">
                     <MapPin className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">Bengaluru, India</span>
+                    <span className="text-sm text-muted-foreground">Coimbatore, India</span>
                   </div>
                 </div>
               </motion.div>
@@ -187,7 +187,7 @@ export function Footer() {
                 Subscribe to our newsletter for the latest in AI, web, and mobile development.
               </p>
             </div>
-            
+
             <div className="lg:col-span-2">
               <div className="flex flex-col sm:flex-row gap-2">
                 <Input
@@ -212,7 +212,7 @@ export function Footer() {
               <div className="hidden sm:block">•</div>
               <p>Built with Next.js, TypeScript, and AI-powered innovation.</p>
             </div>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (

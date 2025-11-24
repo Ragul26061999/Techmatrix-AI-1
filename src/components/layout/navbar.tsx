@@ -6,13 +6,14 @@ import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'Solutions', href: '/solutions' },
-//   { label: 'Portfolio', href: '/portfolio' },
+  //   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Products', href: '/products' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
@@ -38,11 +39,10 @@ export function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
             ? 'bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg'
             : 'bg-transparent'
-        }`}
+          }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -51,9 +51,15 @@ export function Navbar() {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
               >
-                TechMatrix-AI
+                <Image
+                  src="/images/techmatrix_logo.png"
+                  alt="TechMatrix-AI"
+                  width={180}
+                  height={50}
+                  className="h-12 w-auto object-contain"
+                  priority
+                />
               </motion.div>
             </Link>
 
@@ -64,9 +70,8 @@ export function Navbar() {
                   <motion.span
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md ${
-                      pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
-                    }`}
+                    className={`text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md ${pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
+                      }`}
                   >
                     {item.label}
                   </motion.span>
@@ -98,9 +103,8 @@ export function Navbar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium transition-colors hover:text-primary px-3 py-2 rounded-md ${
-                        pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
-                      }`}
+                      className={`text-lg font-medium transition-colors hover:text-primary px-3 py-2 rounded-md ${pathname === item.href ? 'text-primary bg-primary/10' : 'text-muted-foreground'
+                        }`}
                     >
                       {item.label}
                     </Link>
